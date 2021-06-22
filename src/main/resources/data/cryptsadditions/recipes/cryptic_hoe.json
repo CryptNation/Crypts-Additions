@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "c# ",
+    " C ",
+    " C "
+  ],
+  "key": {
+    "c": {
+      "item": "cryptsadditions:cryptic_ingot"
+    },
+    "#": {
+      "item": "cryptsadditions:void_ingot"
+    },
+    "C": {
+      "item": "cryptsadditions:cryptic_rod"
+    }
+  },
+  "result": {
+    "item": "cryptsadditions:cryptic_hoe",
+    "count": 1
+  }
+}

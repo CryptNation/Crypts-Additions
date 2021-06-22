@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " c ",
+    " O ",
+    " C "
+  ],
+  "key": {
+    "c": {
+      "item": "cryptsadditions:cryptic_ingot"
+    },
+    "O": {
+      "item": "cryptsadditions:void_ingot"
+    },
+    "C": {
+      "item": "cryptsadditions:cryptic_rod"
+    }
+  },
+  "result": {
+    "item": "cryptsadditions:cryptic_sword",
+    "count": 1
+  }
+}

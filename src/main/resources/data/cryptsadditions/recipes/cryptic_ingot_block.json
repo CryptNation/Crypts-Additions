@@ -1,0 +1,12 @@
+{
+    "type": "minecraft:crafting_shapeless",
+    "ingredients": [
+        {
+            "item": "cryptsadditions:cryptic_block"
+        }
+    ],
+    "result": {
+        "item": "cryptsadditions:cryptic_ingot",
+        "count": 9
+    }
+}

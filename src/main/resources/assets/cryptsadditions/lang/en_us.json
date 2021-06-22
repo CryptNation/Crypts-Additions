@@ -1,0 +1,26 @@
+{
+  "item.cryptsadditions.cryptic_ingot": "Cryptic Ingot",
+  "item.cryptsadditions.void_ingot": "Void Ingot",
+
+
+
+  "item.cryptsadditions.cryptic_rod": "Cryptic Rod",
+
+
+
+  "item.cryptsadditions.cryptic_shovel": "Cryptic Shovel",
+  "item.cryptsadditions.cryptic_pickaxe": "Cryptic Pickaxe",
+  "item.cryptsadditions.cryptic_axe": "Cryptic Axe",
+  "item.cryptsadditions.cryptic_hoe": "Cryptic Hoe",
+  "item.cryptsadditions.cryptic_sword": "Cryptic Sword",
+
+
+
+  "block.cryptsadditions.cryptic_block": "Cryptic Block",
+  "block.cryptsadditions.cryptic_ore": "Cryptic Ore",
+  "block.cryptsadditions.void_ore": "Void Ore",
+
+
+
+  "itemGroup.Crypt's Additions": "Crypt's Additions"
+}

@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "cCc",
+    " A ",
+    " A "
+  ],
+  "key": {
+    "c": {
+      "item": "cryptsadditions:cryptic_ingot"
+    },
+    "C": {
+      "item": "cryptsadditions:void_ingot"
+    },
+    "A": {
+      "item": "cryptsadditions:cryptic_rod"
+    }
+  },
+  "result": {
+    "item": "cryptsadditions:cryptic_pickaxe",
+    "count": 1
+  }
+}

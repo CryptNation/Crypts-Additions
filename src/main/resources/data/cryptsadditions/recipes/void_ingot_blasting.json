@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "cryptsadditions:void_ore"
+  },
+  "result": "cryptsadditions:void_ingot",
+  "experience": 7.1,
+  "cookingtime": 800
+}
