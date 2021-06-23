@@ -1,6 +1,7 @@
 package com.cryptnation.cryptsadditions.item;
 
 import com.cryptnation.cryptsadditions.CryptsAdditions;
+import com.cryptnation.cryptsadditions.block.ModBlocks;
 import com.cryptnation.cryptsadditions.utilities.Registration;
 import net.minecraft.item.*;
 import net.minecraft.item.crafting.Ingredient;
@@ -67,7 +68,10 @@ public class ModItems {
                                     .group(CryptsAdditions.CRYPTS_ADDITIONS)));
 
     /*Crops*/
-
+    public static final RegistryObject<Item> VOID_DE_SEED =
+            Registration.ITEMS.register("void_de_seed",
+                    () -> new BlockItem(ModBlocks.VOID_DE_CROP.get(),
+                            new Item.Properties() .group(CryptsAdditions.CRYPTS_ADDITIONS)));
 
     public static void register() { }
 
