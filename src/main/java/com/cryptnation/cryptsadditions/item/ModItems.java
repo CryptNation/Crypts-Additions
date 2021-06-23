@@ -2,6 +2,7 @@ package com.cryptnation.cryptsadditions.item;
 
 import com.cryptnation.cryptsadditions.CryptsAdditions;
 import com.cryptnation.cryptsadditions.block.ModBlocks;
+import com.cryptnation.cryptsadditions.item.food.deBar;
 import com.cryptnation.cryptsadditions.utilities.Registration;
 import net.minecraft.item.*;
 import net.minecraft.item.crafting.Ingredient;
@@ -72,6 +73,10 @@ public class ModItems {
             Registration.ITEMS.register("void_de_seed",
                     () -> new BlockItem(ModBlocks.VOID_DE_CROP.get(),
                             new Item.Properties() .group(CryptsAdditions.CRYPTS_ADDITIONS)));
+
+    public static final RegistryObject<Item> DE_BAR =
+            Registration.ITEMS.register("de_bar",
+                    () -> new deBar());
 
     public static void register() { }
 

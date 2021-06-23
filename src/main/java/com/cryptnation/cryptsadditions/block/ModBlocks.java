@@ -1,7 +1,7 @@
 package com.cryptnation.cryptsadditions.block;
 
 import com.cryptnation.cryptsadditions.CryptsAdditions;
-import com.cryptnation.cryptsadditions.crops.VoidCrop;
+import com.cryptnation.cryptsadditions.crops.VoidDeCrop;
 import com.cryptnation.cryptsadditions.utilities.Registration;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
@@ -33,14 +33,11 @@ public class ModBlocks {
                     .harvestLevel(3).harvestTool(ToolType.PICKAXE).setRequiresTool().sound(SoundType.STONE)));
 
 
-
-
-
     /*Crops Block*/
 
     public static final RegistryObject<Block> VOID_DE_CROP =
             Registration.BLOCKS.register("void_de_crop",
-                    () -> new VoidCrop(AbstractBlock.Properties.from(Blocks.WHEAT)));
+                    () -> new VoidDeCrop(AbstractBlock.Properties.from(Blocks.WHEAT)));
 
     public static void register() { }
 

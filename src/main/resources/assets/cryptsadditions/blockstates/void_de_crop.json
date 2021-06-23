@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "age=0": {"model": "cryptsadditions:block/void_de_crop0"},
+    "age=1": {"model": "cryptsadditions:block/void_de_crop1"},
+    "age=2": {"model": "cryptsadditions:block/void_de_crop2"},
+    "age=3": {"model": "cryptsadditions:block/void_de_crop3"},
+    "age=4": {"model": "cryptsadditions:block/void_de_crop4"},
+    "age=5": {"model": "cryptsadditions:block/void_de_crop5"},
+    "age=6": {"model": "cryptsadditions:block/void_de_crop6"},
+    "age=7": {"model": "cryptsadditions:block/void_de_crop7"}
+  }
+
+}

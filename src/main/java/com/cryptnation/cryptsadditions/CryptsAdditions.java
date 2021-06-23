@@ -5,6 +5,8 @@ import com.cryptnation.cryptsadditions.item.ModItems;
 import com.cryptnation.cryptsadditions.utilities.Registration;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.renderer.RenderType;
+import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -73,6 +75,8 @@ public class CryptsAdditions
     private void doClientStuff(final FMLClientSetupEvent event) {
         // do something that can only be done on the client
         LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings);
+
+        RenderTypeLookup.setRenderLayer(ModBlocks.VOID_DE_CROP.get(), RenderType.getCutout());
     }
 
     private void enqueueIMC(final InterModEnqueueEvent event)
