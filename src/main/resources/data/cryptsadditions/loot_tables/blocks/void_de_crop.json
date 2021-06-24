@@ -50,7 +50,7 @@
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "cryptsadditions:_void_de_crop",
+          "block": "cryptsadditions:void_de_crop",
           "properties": {
             "age": "7"
           }
