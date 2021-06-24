@@ -12,13 +12,13 @@
               "conditions": [
                 {
                   "condition": "minecraft:block_state_property",
-                  "block": "cryptsadditions:",
+                  "block": "cryptsadditions:void_de_crop",
                   "properties": {
                     "age": "7"
                   }
                 }
               ],
-              "name": "minecraft:wheat"
+              "name": "cryptsadditions:de_bar"
             },
             {
               "type": "minecraft:item",
@@ -50,7 +50,7 @@
       "conditions": [
         {
           "condition": "minecraft:block_state_property",
-          "block": "minecraft:wheat",
+          "block": "cryptsadditions:_void_de_crop",
           "properties": {
             "age": "7"
           }
