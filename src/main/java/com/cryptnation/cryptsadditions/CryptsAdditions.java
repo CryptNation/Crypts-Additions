@@ -9,6 +9,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -20,6 +21,8 @@ import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.minecraftforge.fml.network.NetworkRegistry;
+import net.minecraftforge.fml.network.simple.SimpleChannel;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -29,9 +32,14 @@ import java.util.stream.Collectors;
 @Mod(CryptsAdditions.MOD_ID)
 public class CryptsAdditions
 {
+    public static final Logger LOGGER = LogManager.getLogger(CryptsAdditions.class);
+    private static final String PROTOCOL_VERSION = "1";
+    public static final SimpleChannel PACKET_HANDLER = NetworkRegistry.newSimpleChannel(new ResourceLocation("crypts_additions", "crypts_additions"),
+            () -> PROTOCOL_VERSION, PROTOCOL_VERSION::equals, PROTOCOL_VERSION::equals);
+
     public static final String MOD_ID = "cryptsadditions";
     // Directly reference a log4j logger.
-
+    public CryptsAdditionsElements elements;
 
 // Creative Item Tab
     public static final ItemGroup CRYPTS_ADDITIONS = new ItemGroup("Crypt's Additions") {
@@ -40,11 +48,6 @@ public class CryptsAdditions
             return new ItemStack(ModItems.CRYPTIC_INGOT.get());
         }
     };
-
-
-
-
-    private static final Logger LOGGER = LogManager.getLogger();
 
     public CryptsAdditions() {
 
