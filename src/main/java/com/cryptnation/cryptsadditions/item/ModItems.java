@@ -4,12 +4,13 @@ import com.cryptnation.cryptsadditions.CryptsAdditions;
 import com.cryptnation.cryptsadditions.block.ModBlocks;
 import com.cryptnation.cryptsadditions.item.food.deBar;
 import com.cryptnation.cryptsadditions.utilities.Registration;
+import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.*;
 import net.minecraft.item.crafting.Ingredient;
+import net.minecraft.util.SoundEvent;
+import net.minecraft.util.SoundEvents;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
-
-import javax.security.auth.callback.Callback;
 
 public class ModItems {
 
@@ -131,6 +132,96 @@ public class ModItems {
         @Override
         public Ingredient getRepairMaterial() {
             return repairMaterial;
+        }
+    }
+
+    /*Armor*/
+
+    public static final RegistryObject<Item> CRYPTIC_HELMET =
+            Registration.ITEMS.register("cryptic_helmet",
+                    () -> new ArmorItem(ModArmorMaterial.CRYPTIC, EquipmentSlotType.HEAD,
+                            new Item.Properties().group(CryptsAdditions.CRYPTS_ADDITIONS)));
+
+    public static final RegistryObject<Item> CRYPTIC_CHESTPLATE =
+            Registration.ITEMS.register("cryptic_chestplate",
+                    () -> new ArmorItem(ModArmorMaterial.CRYPTIC, EquipmentSlotType.CHEST,
+                            new Item.Properties().group(CryptsAdditions.CRYPTS_ADDITIONS)));
+
+    public static final RegistryObject<Item> CRYPTIC_LEGGINGS =
+            Registration.ITEMS.register("cryptic_leggings",
+                    () -> new ArmorItem(ModArmorMaterial.CRYPTIC, EquipmentSlotType.LEGS,
+                            new Item.Properties().group(CryptsAdditions.CRYPTS_ADDITIONS)));
+
+    public static final RegistryObject<Item> CRYPTIC_BOOTS =
+            Registration.ITEMS.register("cryptic_boots",
+                    () -> new ArmorItem(ModArmorMaterial.CRYPTIC, EquipmentSlotType.FEET,
+                            new Item.Properties().group(CryptsAdditions.CRYPTS_ADDITIONS)));
+
+
+
+
+    public enum ModArmorMaterial implements IArmorMaterial
+    {
+        CRYPTIC(500, new int[] { 35, 40, 24, 15 }, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, Ingredient.fromStacks(new ItemStack(ModItems.VOID_INGOT.get())),
+                CryptsAdditions.MOD_ID + ":cryptic", 0, 40);
+        private final int durability;
+        private final int[] damageReductionAmountArray;
+        private final int enchantability;
+        private final SoundEvent soundEvent;
+        private final Ingredient repairMaterial;
+        private final String name;
+        private final float toughness;
+        private final float knockbackResistance;
+
+        ModArmorMaterial(int durability, int[] damageReductionAmountArray, int enchantability, SoundEvent soundEvent, Ingredient repairMaterial, String name, float toughness, float knockbackResistance) {
+            this.durability = durability;
+            this.damageReductionAmountArray = damageReductionAmountArray;
+            this.enchantability = enchantability;
+            this.soundEvent = soundEvent;
+            this.repairMaterial = repairMaterial;
+            this.name = name;
+            this.toughness = toughness;
+            this.knockbackResistance = knockbackResistance;
+        }
+
+        @Override
+        public int getDurability(EquipmentSlotType slotIn) {
+            return durability;
+        }
+
+        @Override
+        public int getDamageReductionAmount(EquipmentSlotType slotIn) {
+            return damageReductionAmountArray[slotIn.getIndex()];
+        }
+
+        @Override
+        public int getEnchantability() {
+            return enchantability;
+        }
+
+        @Override
+        public SoundEvent getSoundEvent() {
+            return soundEvent;
+        }
+
+        @Override
+        public Ingredient getRepairMaterial() {
+            return repairMaterial;
+        }
+
+        @Override
+        public String getName() {
+            return name;
+        }
+
+        @Override
+        public float getToughness() {
+            return toughness;
+        }
+
+        @Override
+        public float getKnockbackResistance() {
+            return knockbackResistance;
         }
     }
 

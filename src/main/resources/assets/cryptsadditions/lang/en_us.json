@@ -3,7 +3,6 @@
   "item.cryptsadditions.void_ingot": "Void Ingot",
 
 
-
   "item.cryptsadditions.cryptic_rod": "Cryptic Rod",
 
 
@@ -17,6 +16,12 @@
   "item.cryptsadditions.cryptic_axe": "Cryptic Axe",
   "item.cryptsadditions.cryptic_hoe": "Cryptic Hoe",
   "item.cryptsadditions.cryptic_sword": "Cryptic Sword",
+
+
+  "item.cryptsadditions.cryptic_helmet": "Cryptic Helmet",
+  "item.cryptsadditions.cryptic_chestplate": "Cryptic Chestplate",
+  "item.cryptsadditions.cryptic_leggings": "Cryptic Leggings",
+  "item.cryptsadditions.cryptic_boots": "Cryptic Boots",
 
 
 
