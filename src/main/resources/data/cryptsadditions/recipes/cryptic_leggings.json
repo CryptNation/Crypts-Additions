@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "cEc",
+        "c c",
+        "c c"
+    ],
+    "key": {
+        "c": {
+            "item": "cryptsadditions:cryptic_ingot"
+        },
+        "E": {
+            "item": "cryptsadditions:void_ingot"
+        }
+    },
+    "result": {
+        "item": "cryptsadditions:cryptic_leggings",
+        "count": 1
+    }
+}

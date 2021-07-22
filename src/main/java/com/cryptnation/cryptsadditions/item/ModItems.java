@@ -162,8 +162,9 @@ public class ModItems {
 
     public enum ModArmorMaterial implements IArmorMaterial
     {
-        CRYPTIC(500, new int[] { 20, 24, 35, 45 }, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, Ingredient.fromStacks(new ItemStack(ModItems.VOID_INGOT.get())),
+        CRYPTIC(500, new int[] { 28, 30, 45, 35 }, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, Ingredient.fromStacks(new ItemStack(ModItems.VOID_INGOT.get())),
                 CryptsAdditions.MOD_ID + ":cryptic", 10, 40);
+
         private final int durability;
         private final int[] damageReductionAmountArray;
         private final int enchantability;

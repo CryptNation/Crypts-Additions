@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "c J",
+        "J J"
+    ],
+    "key": {
+        "c": {
+            "item": "cryptsadditions:void_ingot"
+        },
+        "J": {
+            "item": "cryptsadditions:cryptic_ingot"
+        }
+    },
+    "result": {
+        "item": "cryptsadditions:cryptic_boots",
+        "count": 1
+    }
+}

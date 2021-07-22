@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "c c",
+        "c#c",
+        "ccc"
+    ],
+    "key": {
+        "c": {
+            "item": "cryptsadditions:cryptic_ingot"
+        },
+        "#": {
+            "item": "cryptsadditions:void_ingot"
+        }
+    },
+    "result": {
+        "item": "cryptsadditions:cryptic_chestplate",
+        "count": 1
+    }
+}

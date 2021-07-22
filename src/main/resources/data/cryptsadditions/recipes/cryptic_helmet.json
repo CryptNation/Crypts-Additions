@@ -1,0 +1,19 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "cKc",
+        "c c"
+    ],
+    "key": {
+        "c": {
+            "item": "cryptsadditions:cryptic_ingot"
+        },
+        "K": {
+            "item": "cryptsadditions:void_ingot"
+        }
+    },
+    "result": {
+        "item": "cryptsadditions:cryptic_helmet",
+        "count": 1
+    }
+}
