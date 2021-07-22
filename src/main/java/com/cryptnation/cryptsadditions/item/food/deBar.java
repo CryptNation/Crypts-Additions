@@ -20,7 +20,7 @@ public class deBar extends Item
     {
         super(new Properties().group(CryptsAdditions.CRYPTS_ADDITIONS)
         .food(new Food.Builder().hunger(20).saturation(1.5f)
-                .effect(() -> new EffectInstance(Effects.GLOWING, 500, 2),0.8f).build()));
+                .effect(() -> new EffectInstance(Effects.REGENERATION, 500, 2),0.8f).build()));
     }
 
     @Override
@@ -39,7 +39,7 @@ public class deBar extends Item
         }
         else
         {
-            tooltip.add(new StringTextComponent("A mystical bar, originated from the Void Dimension"));
+            tooltip.add(new StringTextComponent("\u00A71"+" A mystical bar, originated from the Void Dimension"));
         }
         super.addInformation(stack, world, tooltip, flag);
     }
