@@ -11,7 +11,6 @@ import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
 import net.minecraftforge.common.ToolType;
 import net.minecraftforge.fml.RegistryObject;
-
 public class ModItems {
 
     /*Misc*/
@@ -32,17 +31,16 @@ public class ModItems {
 
     public static final RegistryObject<Item> CRYPTIC_SHOVEL =
             Registration.ITEMS.register("cryptic_shovel",
-                    () -> new ShovelItem(ModItemTier.CRYPTIC_SHOVEL, 0,0,
+                    () -> new PickaxeItem(ModItemTier.CRYPTIC_SHOVEL, 0,0,
                             new Item.Properties()
-                    .defaultMaxDamage(150)
-                    .addToolType(ToolType.SHOVEL, 2)
-                    .group(CryptsAdditions.CRYPTS_ADDITIONS)));
+                                    .addToolType(ToolType.SHOVEL, 4)
+                                    .group(CryptsAdditions.CRYPTS_ADDITIONS)));
+
 
     public static final RegistryObject<Item> CRYPTIC_PICKAXE =
             Registration.ITEMS.register("cryptic_pickaxe",
                     () -> new PickaxeItem(ModItemTier.CRYPTIC_PICKAXE, 0,0,
                             new Item.Properties()
-                                    .defaultMaxDamage(150)
                                     .addToolType(ToolType.PICKAXE, 4)
                                     .group(CryptsAdditions.CRYPTS_ADDITIONS)));
 
@@ -50,7 +48,6 @@ public class ModItems {
             Registration.ITEMS.register("cryptic_axe",
                     () -> new AxeItem(ModItemTier.CRYPTIC_AXE, 0,0,
                             new Item.Properties()
-                                    .defaultMaxDamage(150)
                                     .addToolType(ToolType.AXE, 4)
                                     .group(CryptsAdditions.CRYPTS_ADDITIONS)));
 
@@ -58,15 +55,13 @@ public class ModItems {
             Registration.ITEMS.register("cryptic_hoe",
                     () -> new HoeItem(ModItemTier.CRYPTIC_HOE, 0,0,
                             new Item.Properties()
-                                    .defaultMaxDamage(150)
-                                    .addToolType(ToolType.HOE, 2)
+                                    .addToolType(ToolType.HOE, 4)
                                     .group(CryptsAdditions.CRYPTS_ADDITIONS)));
 
     public static final RegistryObject<Item> CRYPTIC_SWORD =
             Registration.ITEMS.register("cryptic_sword",
                     () -> new SwordItem(ModItemTier.CRYPTIC_SWORD, 0,0,
                             new Item.Properties()
-                                    .defaultMaxDamage(150)
                                     .group(CryptsAdditions.CRYPTS_ADDITIONS)));
 
     /*Crops*/
@@ -83,11 +78,11 @@ public class ModItems {
 
     public enum ModItemTier implements IItemTier {
 
-        CRYPTIC_SHOVEL(4, 20000, 20.5f, 8, 30, Ingredient.fromStacks(new ItemStack(ModItems.CRYPTIC_INGOT.get()))),
-        CRYPTIC_PICKAXE(4, 20000, 30.5f, 12, 30, Ingredient.fromStacks(new ItemStack(ModItems.CRYPTIC_INGOT.get()))),
-        CRYPTIC_AXE(4, 20000, 20.5f, 49, 30, Ingredient.fromStacks(new ItemStack(ModItems.CRYPTIC_INGOT.get()))),
-        CRYPTIC_HOE(4, 20000, 10.5f, 8, 30, Ingredient.fromStacks(new ItemStack(ModItems.CRYPTIC_INGOT.get()))),
-        CRYPTIC_SWORD(4, 20000, 20.5f, 37, 30, Ingredient.fromStacks(new ItemStack(ModItems.CRYPTIC_INGOT.get())));
+        CRYPTIC_SHOVEL(4, 3000, 20, 19, 30, Ingredient.fromStacks(new ItemStack(ModItems.VOID_INGOT.get()))),
+        CRYPTIC_PICKAXE(4, 3000, 20.5f, 29, 30, Ingredient.fromStacks(new ItemStack(ModItems.VOID_INGOT.get()))),
+        CRYPTIC_AXE(4, 3000, 20.5f, 79, 30, Ingredient.fromStacks(new ItemStack(ModItems.VOID_INGOT.get()))),
+        CRYPTIC_HOE(4, 3000, 20.5f, 9, 30, Ingredient.fromStacks(new ItemStack(ModItems.VOID_INGOT.get()))),
+        CRYPTIC_SWORD(4, 3000, 10.5f, 59, 30, Ingredient.fromStacks(new ItemStack(ModItems.VOID_INGOT.get())));
         private final int harvestLevel;
         private final int maxUses;
         private final float efficiency;
@@ -162,8 +157,8 @@ public class ModItems {
 
     public enum ModArmorMaterial implements IArmorMaterial
     {
-        CRYPTIC(500, new int[] { 28, 30, 45, 35 }, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, Ingredient.fromStacks(new ItemStack(ModItems.VOID_INGOT.get())),
-                CryptsAdditions.MOD_ID + ":cryptic", 10, 40);
+        CRYPTIC(3000, new int[] { 50, 60, 80, 70 }, 30, SoundEvents.ITEM_ARMOR_EQUIP_DIAMOND, Ingredient.fromStacks(new ItemStack(ModItems.VOID_INGOT.get())),
+                CryptsAdditions.MOD_ID + ":cryptic", 20, 40);
 
         private final int durability;
         private final int[] damageReductionAmountArray;
