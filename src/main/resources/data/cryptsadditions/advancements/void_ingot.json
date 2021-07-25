@@ -1,0 +1,41 @@
+{
+  "parent": "cryptsadditions:advancements/cryptic_ingot",
+  "display": {
+    "icon": {
+      "item": "cryptsadditions:void_ingot"
+    },
+
+
+
+    "title": "A Connection to the Void?",
+    "description": "Smelted a Void Ingot!",
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png"
+  },
+
+
+
+  "criteria": {
+    "borrowed": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "cryptsadditions:void_ingot"
+          }
+        ]
+      }
+    }
+  },
+
+
+
+  "requirements": [
+    [
+      "borrowed"
+    ]
+  ]
+}
