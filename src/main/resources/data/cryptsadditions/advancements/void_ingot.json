@@ -1,5 +1,5 @@
 {
-  "parent": "cryptsadditions:advancements/cryptic_ingot",
+  "parent": "cryptsadditions:cryptic_ingot",
   "display": {
     "icon": {
       "item": "cryptsadditions:void_ingot"
@@ -9,7 +9,7 @@
 
     "title": "A Connection to the Void?",
     "description": "Smelted a Void Ingot!",
-    "frame": "goal",
+    "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false,

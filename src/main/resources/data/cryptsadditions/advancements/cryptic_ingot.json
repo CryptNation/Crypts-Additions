@@ -1,4 +1,5 @@
 {
+  "parent": "cryptsadditions:cryptic_ore",
   "display": {
     "icon": {
       "item": "cryptsadditions:cryptic_ingot"
@@ -8,7 +9,7 @@
 
     "title": "Cryptic Corruption",
     "description": "Smelted a Cryptic Ingot!",
-    "frame": "goal",
+    "frame": "task",
     "show_toast": true,
     "announce_to_chat": true,
     "hidden": false,
