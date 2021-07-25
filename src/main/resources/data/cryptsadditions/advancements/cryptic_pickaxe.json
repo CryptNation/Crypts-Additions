@@ -1,0 +1,41 @@
+{
+  "parent": "cryptsadditions:void_ingot",
+  "display": {
+    "icon": {
+      "item": "cryptsadditions:cryptic_pickaxe"
+    },
+
+
+
+    "title": "Corrupted Pickaxe",
+    "description": "Get a Cryptic Pickaxe",
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false,
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png"
+  },
+
+
+
+  "criteria": {
+    "borrowed": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "cryptsadditions:cryptic_pickaxe"
+          }
+        ]
+      }
+    }
+  },
+
+
+
+  "requirements": [
+    [
+      "borrowed"
+    ]
+  ]
+}
