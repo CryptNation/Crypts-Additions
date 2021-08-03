@@ -2,6 +2,7 @@ package com.cryptnation.cryptsadditions.item;
 
 import com.cryptnation.cryptsadditions.CryptsAdditions;
 import com.cryptnation.cryptsadditions.block.ModBlocks;
+import com.cryptnation.cryptsadditions.block.ModFluids;
 import com.cryptnation.cryptsadditions.item.food.deBar;
 import com.cryptnation.cryptsadditions.utilities.Registration;
 import net.minecraft.inventory.EquipmentSlotType;
@@ -73,6 +74,10 @@ public class ModItems {
     public static final RegistryObject<Item> DE_BAR =
             Registration.ITEMS.register("de_bar",
                     () -> new deBar());
+
+    public static final RegistryObject<Item> VOID_PLASMA_BUCKET =
+            Registration.ITEMS.register("void_plasma_bucket", () -> new BucketItem(ModFluids.VOID_PLASMA::get,
+                    new Item.Properties().group(CryptsAdditions.CRYPTS_ADDITIONS).maxStackSize(16)));
 
     public static void register() { }
 

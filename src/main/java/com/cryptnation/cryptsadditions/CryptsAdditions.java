@@ -1,6 +1,7 @@
 package com.cryptnation.cryptsadditions;
 
 import com.cryptnation.cryptsadditions.block.ModBlocks;
+import com.cryptnation.cryptsadditions.block.ModFluids;
 import com.cryptnation.cryptsadditions.item.ModItems;
 import com.cryptnation.cryptsadditions.utilities.Registration;
 import net.minecraft.block.Block;
@@ -51,6 +52,7 @@ public class CryptsAdditions
         Registration.register();
         ModItems.register();
         ModBlocks.register();
+        ModFluids.register();
 
         // Register the setup method for modloading
         FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
