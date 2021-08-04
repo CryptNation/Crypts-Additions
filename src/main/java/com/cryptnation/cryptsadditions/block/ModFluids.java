@@ -1,6 +1,7 @@
 package com.cryptnation.cryptsadditions.block;
 
 import com.cryptnation.cryptsadditions.CryptsAdditions;
+import com.cryptnation.cryptsadditions.item.ModItems;
 import com.cryptnation.cryptsadditions.utilities.Registration;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.FlowingFluidBlock;
@@ -35,7 +36,7 @@ public class ModFluids
     public static final ForgeFlowingFluid.Properties VOID_PROPERTIES = new ForgeFlowingFluid.Properties(
             () -> VOID_PLASMA.get(), () -> VOID_PLASMA_FLOWING.get(), FluidAttributes.builder(VOID_PLASMA_STILL_RL,VOID_PLASMA_FLOWING_RL)
                 .density(15).luminosity(2).rarity(Rarity.RARE).sound(SoundEvents.ITEM_HONEY_BOTTLE_DRINK).overlay(VOID_PLASMA_OVERLAY_RL).viscosity(5))
-                .slopeFindDistance(3).levelDecreasePerBlock(3).block(() -> ModFluids.VOID_PLASMA_BLOCK.get() ).bucket(() -> );
+                .slopeFindDistance(2).levelDecreasePerBlock(2).block(() -> ModFluids.VOID_PLASMA_BLOCK.get() ).bucket(() -> ModItems.VOID_PLASMA_BUCKET.get());
 
     public static final RegistryObject<FlowingFluidBlock> VOID_PLASMA_BLOCK = Registration.BLOCKS.register("void",
         () -> new FlowingFluidBlock(() -> ModFluids.VOID_PLASMA.get(), AbstractBlock.Properties.create(Material.WATER)

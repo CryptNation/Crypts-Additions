@@ -4,6 +4,7 @@
 
 
   "item.cryptsadditions.cryptic_rod": "Cryptic Rod",
+  "item.cryptsadditions.void_plasma_bucket": "Void Plasma",
 
 
   "block.cryptsadditions.void_de_seed": "D'E Seeds",
@@ -24,11 +25,9 @@
   "item.cryptsadditions.cryptic_boots": "Cryptic Boots",
 
 
-
   "block.cryptsadditions.cryptic_block": "Cryptic Block",
   "block.cryptsadditions.cryptic_ore": "Cryptic Ore",
   "block.cryptsadditions.void_ore": "Void Ore",
-
 
 
   "itemGroup.Crypt's Additions": "Crypt's Additions"

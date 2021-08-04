@@ -1,9 +1,6 @@
 {
-
   "parent": "item/generated",
   "textures": {
     "layer0": "cryptsadditions:item/de_bar"
   }
-
-
 }
