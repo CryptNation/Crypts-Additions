@@ -50,6 +50,8 @@ public class ModItems {
 	public static final RegistryObject<Item> CRYPTIC_BOOTS = Registration.ITEMS.register("cryptic_boots", () -> new ArmorItem(ModArmorMaterial.CRYPTIC, EquipmentSlotType.FEET,new Item.Properties().group(CryptsAdditions.CRYPTS_ADDITIONS)));
 
 
+	public static void register() {}
+
 	public enum ModItemTier implements IItemTier {
 
 		CRYPTIC_SHOVEL(4, 3000, 20, 19, 30, Ingredient.fromStacks(new ItemStack(ModItems.VOID_INGOT.get()))),

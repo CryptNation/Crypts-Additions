@@ -28,6 +28,8 @@ public class ModBlocks {
 
 	public static final RegistryObject<Block> VOID_DE_CROP = Registration.BLOCKS.register("void_de_crop",	() -> new VoidDeCrop(AbstractBlock.Properties.from(Blocks.WHEAT)));
 
+	public static void register() {}
+
 	private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block) {
 		RegistryObject<T> toReturn = Registration.BLOCKS.register(name, block);
 		Registration.ITEMS.register(name, () -> new BlockItem(toReturn.get(), new Item.Properties().group(CryptsAdditions.CRYPTS_ADDITIONS)));

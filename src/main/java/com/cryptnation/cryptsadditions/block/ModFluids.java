@@ -28,4 +28,6 @@ public class ModFluids {
 	public static final RegistryObject<FlowingFluidBlock> VOID_PLASMA_BLOCK = Registration.BLOCKS.register("void", () -> new FlowingFluidBlock(() -> ModFluids.VOID_PLASMA.get(), AbstractBlock.Properties.create(Material.WATER).doesNotBlockMovement().hardnessAndResistance(100f).noDrops()));
 
 
+	public static void register() {}
+
 }
