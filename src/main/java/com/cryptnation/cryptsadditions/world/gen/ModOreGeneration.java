@@ -3,15 +3,14 @@ package com.cryptnation.cryptsadditions.world.gen;
 
 import com.cryptnation.cryptsadditions.CryptsAdditions;
 import com.google.common.collect.Lists;
-import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.util.registry.Registry;
+import net.minecraft.util.registry.WorldGenRegistries;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.biome.BiomeGenerationSettings;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
-import net.minecraft.world.gen.feature.WorldDecoratingHelper;
 import net.minecraft.world.gen.placement.ConfiguredPlacement;
 import net.minecraft.world.gen.placement.DepthAverageConfig;
 import net.minecraft.world.gen.placement.Placement;
@@ -27,54 +26,35 @@ import java.util.function.Supplier;
 
 
 @Mod.EventBusSubscriber(modid = CryptsAdditions.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-public class ModOreGeneration
-{
+public class ModOreGeneration {
 
-    @SubscribeEvent
-    public static void generateOres(FMLLoadCompleteEvent event)
-    {
-        for(OreType ore : OreType.values())
-        {
-            OreFeatureConfig oreFeatureConfig = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD,
-                    ore.getBlock().getDefaultState(), ore.getMaxVeinSize());
+	@SubscribeEvent
+	public static void generateOres(FMLLoadCompleteEvent event) {
+		for (OreType ore : OreType.values()) {
+			OreFeatureConfig oreFeatureConfig = new OreFeatureConfig(OreFeatureConfig.FillerBlockType.BASE_STONE_OVERWORLD, ore.getBlock().getDefaultState(), ore.getMaxVeinSize());
 
-            ConfiguredPlacement configuredPlacement = Placement.DEPTH_AVERAGE.configure(
-                    new DepthAverageConfig(ore.getMinHeight(), ore.getMaxHeight()));
+			ConfiguredPlacement configuredPlacement = Placement.DEPTH_AVERAGE.configure(new DepthAverageConfig(ore.getMinHeight(), ore.getMaxHeight()));
 
-            Registry.register(WorldGenRegistries.CONFIGURED_FEATURE,
-                    ore.getBlock().getRegistryName(),
-                    Feature.ORE.withConfiguration(oreFeatureConfig).withPlacement(configuredPlacement)
-            .square().func_242731_b(ore.getMaxVeinSize()));
+			Registry.register(WorldGenRegistries.CONFIGURED_FEATURE, ore.getBlock().getRegistryName(), Feature.ORE.withConfiguration(oreFeatureConfig).withPlacement(configuredPlacement).square().func_242731_b(ore.getMaxVeinSize()));
 
-            for(Biome biome : ForgeRegistries.BIOMES){
-                if (
-                        !biome.getCategory().equals(Biome.Category.NETHER)
-                                && !biome.getCategory().equals(Biome.Category.THEEND))
-                {
-                    addFeatureToBiome(biome, GenerationStage.Decoration.UNDERGROUND_ORES,
-                            WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(ore.getBlock().getRegistryName()));
-                }
-            }
-        }
-    }
+			for (Biome biome : ForgeRegistries.BIOMES)
+				if (!biome.getCategory().equals(Biome.Category.NETHER) && !biome.getCategory().equals(Biome.Category.THEEND))
+					addFeatureToBiome(biome, GenerationStage.Decoration.UNDERGROUND_ORES, WorldGenRegistries.CONFIGURED_FEATURE.getOrDefault(ore.getBlock().getRegistryName()));
+		}
+	}
 
-    private static void addFeatureToBiome(Biome biome, GenerationStage.Decoration decoration
-        , ConfiguredFeature<?, ?> configuredFeature)
-    {
-        List<List<Supplier<ConfiguredFeature<?, ?>>>> biomeFeatures = new ArrayList<>(
-                biome.getGenerationSettings().getFeatures()
-        );
+	private static void addFeatureToBiome(Biome biome, GenerationStage.Decoration decoration, ConfiguredFeature<?, ?> configuredFeature) {
+		List<List<Supplier<ConfiguredFeature<?, ?>>>> biomeFeatures = new ArrayList<>(biome.getGenerationSettings().getFeatures());
 
-        while (biomeFeatures.size() <= decoration.ordinal()) {
-            biomeFeatures.add(Lists.newArrayList());
-        }
-        List<Supplier<ConfiguredFeature<?, ?>>> features = new ArrayList<>(biomeFeatures.get(decoration.ordinal()));
-        features.add(() -> configuredFeature);
-        biomeFeatures.set(decoration.ordinal(), features);
+		while (biomeFeatures.size() <= decoration.ordinal())
+			biomeFeatures.add(Lists.newArrayList());
 
-        /*Change field_242484_f to what Biome is needed*/
-        ObfuscationReflectionHelper.setPrivateValue(BiomeGenerationSettings.class, biome.getGenerationSettings(),
-                biomeFeatures, "field_242484_f");
-    }
+		List<Supplier<ConfiguredFeature<?, ?>>> features = new ArrayList<>(biomeFeatures.get(decoration.ordinal()));
+		features.add(() -> configuredFeature);
+		biomeFeatures.set(decoration.ordinal(), features);
+
+		/*Change field_242484_f to what Biome is needed*/
+		ObfuscationReflectionHelper.setPrivateValue(BiomeGenerationSettings.class, biome.getGenerationSettings(), biomeFeatures, "field_242484_f");
+	}
 
 }
